@@ -34,9 +34,9 @@
                     <label> <i class="fa-solid fa-at"></i></label>
                 </div>
                 <div class="infield">
-                    <input type="password" placeholder="Password" />
+                    <input type="password" id="password" placeholder="Password" />
                     <label><i class="fa-solid fa-lock"></i></label>
-                    <button type="button" id="eye"><i class="fa-solid fa-eye"></i></button>
+                    <button type="button" class="eye" onclick="showPassword()"><i class="fa-solid fa-eye"></i></button>
                 </div>
                 <button class="btn danger">Sign Up</button>
             </form>
@@ -55,9 +55,9 @@
                     <label><i class="fa-solid fa-at"></i></label>
                 </div>
                 <div class="infield">
-                    <input type="password" placeholder="Password" />
+                    <input type="password" id="password2" placeholder="Password" />
                     <label><i class="fa-solid fa-lock"></i></label>
-                    <button type="button" id="eye"><i class="fa-solid fa-eye"></i></button>
+                    <button type="button" class="eye" onclick="showPassword()"><i class="fa-solid fa-eye"></i></button>
                   
                 </div>
                 <a href="#" class="forgot">Forgot your password?</a>
@@ -90,7 +90,19 @@
             document.querySelector('body').classList.toggle('active');
          }
         
-        
+        var pass1 = document.getElementById('password');     
+        var pass2 = document.getElementById('password2');
+        function showPassword(){
+            if((pass1.type === "password") || (pass2.type === "password")){
+                pass1.type = "text";
+                pass2.type = "text";
+            } else {
+                pass1.type = "password";
+                pass2.type = "password";
+            }
+        }
+
+
     </script>
 </body>
 </html>

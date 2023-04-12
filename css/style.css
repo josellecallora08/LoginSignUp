@@ -100,7 +100,7 @@ body {
   left: 15px;
   top: 10px;
 }
-.container .form-container .infield #eye {
+.container .form-container .infield .eye {
   all: unset;
   cursor: pointer;
   position: absolute;
