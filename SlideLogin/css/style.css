@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #EBF4FA;
+  max-width: 850px;
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  position: relative;
+}
+.container .sign-up-container {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+.container .sign-in-container {
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  transition: all 0.5s ease;
+}
+.container .form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: #EBF4FA;
+}
+.container .form-container .social-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.container .form-container .social-container .social {
+  border: 1px solid #92979B;
+  display: flex;
+  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 300ms ease;
+}
+.container .form-container .social-container .social:hover {
+  background-color: #181E34;
+}
+.container .form-container .social-container .social:hover i {
+  color: #EBF4FA;
+}
+.container .form-container .infield {
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+  margin: 15px auto;
+}
+.container .form-container .infield input {
+  outline: none;
+  min-width: 300px;
+  padding: 10px 10px 10px 40px;
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+.container .form-container .infield input:focus {
+  border-color: #181E34;
+}
+.container .form-container .infield input:not(:-moz-placeholder-shown) {
+  border-color: #181E34;
+}
+.container .form-container .infield input:not(:placeholder-shown) {
+  border-color: #181E34;
+}
+.container .form-container .infield label {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+.container .form-container .infield #eye {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+.container .form-container button {
+  all: unset;
+  padding: 5px 10px;
+  border: 1px solid #92979B;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.container .form-container button:hover {
+  background-color: #181E34;
+  color: #EBF4FA;
+}
+.container .overlay-container .overlay-panel {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  background-color: #181E34;
+  color: #EBF4FA;
+  height: 100%;
+  text-align: center;
+}
+.container .overlay-container .overlay {
+  width: 50%;
+}
+.container .overlay-container .overlay .overlay-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 50%;
+  transition: all 0.5s ease;
+}
+.container .overlay-container .overlay .overlay-right p {
+  margin: 20px 0;
+  width: 200px;
+}
+.container .overlay-container .overlay .overlay-right button {
+  all: unset;
+  padding: 5px 10px;
+  border: 1px solid #92979B;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.container .overlay-container .overlay .overlay-right button:hover {
+  background-color: #EBF4FA;
+  color: #181E34;
+}
+.container .overlay-container .overlay .overlay-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 50%;
+  transition: all 0.5s ease;
+}
+.container .overlay-container .overlay .overlay-left p {
+  width: 200px;
+  margin: 20px auto;
+  text-align: center;
+}
+.container .overlay-container .overlay .overlay-left button {
+  all: unset;
+  padding: 5px 10px;
+  border: 1px solid #92979B;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.container .overlay-container .overlay .overlay-left button:hover {
+  background-color: #EBF4FA;
+  color: #181E34;
+}
+
+form:last-child {
+  display: block;
+  text-align: center;
+}
+
+.forgot {
+  font-size: 12px;
+  display: block;
+  margin: 15px 0;
+}
+.forgot:hover {
+  text-decoration: underline;
+}
+
+body.active .overlay-container .overlay .overlay-left {
+  transform: translateX(100%);
+  z-index: 1;
+}
+
+body.active .overlay-container .overlay .overlay-right {
+  transform: translateX(100%);
+}
+
+body.active .container .sign-in-container {
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+body.active .container .sign-up-container {
+  transform: translateX(-100%);
+}/*# sourceMappingURL=style.css.map */
